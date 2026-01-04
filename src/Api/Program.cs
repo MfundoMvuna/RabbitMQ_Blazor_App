@@ -1,5 +1,6 @@
 using Api.Registration;
 using Infrastructure.Persistence.Registration;
+using OpenIddict.Abstractions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,8 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<Infrastructure.Persistence.ApplicationDbContext>();
     db.Database.EnsureCreated();
 
-    var manager = scope.ServiceProvider.GetRequiredService<OpenIddict.Abstractions.IOpenIddictApplicationManager<OpenIddict.EntityFrameworkCore.Models.OpenIddictEntityFrameworkCoreApplication>>();
+    //var manager = scope.ServiceProvider.GetRequiredService<OpenIddict.Abstractions.IOpenIddictApplicationManager<OpenIddict.EntityFrameworkCore.Models.OpenIddictEntityFrameworkCoreApplication>>();
+    var manager = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
     var userManager = scope.ServiceProvider.GetRequiredService<Microsoft.AspNetCore.Identity.UserManager<Infrastructure.Persistence.Identity.ApplicationUser>>();
 
     var clientId = "blazor_client";
@@ -36,7 +38,7 @@ using (var scope = app.Services.CreateScope())
             {
                 OpenIddict.Abstractions.OpenIddictConstants.Permissions.Endpoints.Authorization,
                 OpenIddict.Abstractions.OpenIddictConstants.Permissions.Endpoints.Token,
-                OpenIddict.Abstractions.OpenIddictConstants.Permissions.Endpoints.Userinfo,
+                //OpenIddict.Abstractions.OpenIddictConstants.Permissions.Endpoints.Userinfo,
                 OpenIddict.Abstractions.OpenIddictConstants.Permissions.GrantTypes.AuthorizationCode,
                 OpenIddict.Abstractions.OpenIddictConstants.Permissions.ResponseTypes.Code,
                 OpenIddict.Abstractions.OpenIddictConstants.Permissions.Scopes.Email,
