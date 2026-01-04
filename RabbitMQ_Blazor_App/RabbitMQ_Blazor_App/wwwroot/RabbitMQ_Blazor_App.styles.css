@@ -1,0 +1,166 @@
+/* Placeholder styles file so server serves RabbitMQ_Blazor_App.styles.css referenced by the layout. */
+@import url('app.css');
+
+/* Add project-specific styles below if needed */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Merged app.css and project theme variables */
+/* --- app.css original rules --- */
+h1:focus {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--success, #26b050);
+}
+
+.invalid {
+    outline: 1px solid var(--error, #e50000);
+}
+
+.validation-message {
+    color: var(--error, #e50000);
+}
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA9NC42Nzc4IDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC40ODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, var(--error-bg, #b32121);
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: var(--error-fg, white);
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}
+
+.darker-border-checkbox.form-check-input {
+    border-color: var(--border, #929292);
+}
+
+/* --- Theme variables and base styles --- */
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --primary: #0d6efd;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --error: #e50000;
+  --error-bg: #b32121;
+  --error-fg: #ffffff;
+  --success: #26b050;
+  --container-max-width: 72rem;
+}
+
+/* Respect user's OS preference by default */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --text: #e6eef8;
+    --primary: #6ea8fe;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --error: #ff6b6b;
+    --error-bg: #a11;
+    --error-fg: #fff;
+    --success: #2ecc71;
+  }
+}
+
+/* Explicit dark theme override */
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --primary: #6ea8fe;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+/* Layout and utilities */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+button, .btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.input, input, textarea, select {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--text);
+}
+
+/* small helpers used by Blazor components */
+.validation-message { color: var(--error); }
+
+/* keep original blazor error boundary appearance, but driven by variables */
+.blazor-error-boundary { background-position: 1rem center; }
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.08);
+  cursor: pointer;
+  z-index: 1000;
+  border: none;
+}
+.theme-toggle:focus { outline: 3px solid rgba(13,110,253,0.2); }
+/* Theme-specific small components */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  background: transparent;
+}
+
+.footer {
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Utility: visually hidden */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .container { padding: 0.75rem; }
+}
